@@ -17,6 +17,7 @@
         <module>gmall-ware</module>
         <module>renren-fast-master</module>
         <module>renren-generator-master</module>
+        <module>gmall-common</module>
     </modules>
 
 </project>
