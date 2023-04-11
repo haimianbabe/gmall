@@ -3,6 +3,7 @@ package com.wang.gmall.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.wang.gmall.member.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +30,9 @@ import com.wang.common.utils.R;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
+    @Autowired
+    private CouponFeignService couponFeignService;
 
     /**
      * 列表
@@ -79,6 +83,11 @@ public class MemberController {
 		memberService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
+    }
+
+    @RequestMapping("/coupon")
+    public R getCouponList(){
+        return couponFeignService.getCouponList();
     }
 
 }

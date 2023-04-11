@@ -1,0 +1,16 @@
+server:
+  port: 88
+
+spring:
+  application:
+    name: gmall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: test-route
+          uri: https://www.cnblogs.com/wu-song/p/7929595.html
+          predicates:
+            - Query=url,test1

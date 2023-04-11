@@ -1,15 +1,16 @@
-package com.wang.gmall.coupon;
+package com.wang.gmall.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-@SpringBootApplication
 @EnableDiscoveryClient
-public class CouponMain7000 {
+@SpringBootApplication
+public class GatewayMain88 {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(CouponMain7000.class,args);
+        SpringApplication.run(GatewayMain88.class,args);
     }
 }
