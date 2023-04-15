@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="子模块搭建">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-member/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/MemberMain8000.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/OrderMain9000.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/ProductMain10000.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-ware/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-ware/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/WareMain11000.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/entity/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/entity/CategoryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast-master/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/renren-fast-master/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast-master/src/main/java/io/renren/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/renren-fast-master/src/main/java/io/renren/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renren-fast-master/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/renren-fast-master/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renren-generator-master/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator-master/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renren-generator-master/src/main/resources/generator.properties" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator-master/src/main/resources/generator.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renren-generator-master/src/main/resources/template/Controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/renren-generator-master/src/main/resources/template/Controller.java.vm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +31,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,6 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-ware/src/main/resources" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -66,9 +71,17 @@
       <recent name="D:\IdeaWorkspace\gmall\gmall-ware\src\main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wang.gmall.gateway.config" />
       <recent name="com.wang.common.validator.group" />
       <recent name="com.wang.gmall.common.utils" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ProductMain10000">
     <configuration name="CouponMain7000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -84,9 +97,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GmallCouponApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="gmall-coupon" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.coupon.GmallCouponApplication" />
+    <configuration name="GatewayMain88" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gmall-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wang.gmall.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.gateway.GatewayMain88" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MemberMain8000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-member" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.member.MemberMain8000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderMain9000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.order.OrderMain9000" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,9 +151,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WareMain11000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-ware" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.ware.WareMain11000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ProductMain10000" />
+        <item itemvalue="Spring Boot.GatewayMain88" />
         <item itemvalue="Spring Boot.CouponMain7000" />
       </list>
     </recent_temporary>
@@ -135,7 +176,13 @@
       <updated>1680946168270</updated>
       <workItem from="1680946169429" duration="1500000" />
       <workItem from="1680947723642" duration="9517000" />
-      <workItem from="1681099114956" duration="11695000" />
+      <workItem from="1681099114956" duration="12031000" />
+      <workItem from="1681176912617" duration="19695000" />
+      <workItem from="1681205037450" duration="259000" />
+      <workItem from="1681263407093" duration="4575000" />
+      <workItem from="1681372503395" duration="2939000" />
+      <workItem from="1681436075434" duration="16728000" />
+      <workItem from="1681523804420" duration="10004000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>
@@ -158,7 +205,35 @@
       <option name="project" value="LOCAL" />
       <updated>1681028918909</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="子模块搭建">
+      <created>1681119154033</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681119154033</updated>
+    </task>
+    <task id="LOCAL-00005" summary="子模块搭建">
+      <created>1681119336179</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681119336179</updated>
+    </task>
+    <task id="LOCAL-00006" summary="子模块搭建">
+      <created>1681178107607</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681178107607</updated>
+    </task>
+    <task id="LOCAL-00007" summary="子模块搭建">
+      <created>1681204608816</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681204608816</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +242,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="38c854e6-4401-4c48-839d-8c0ccd0fc553">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:D:/IdeaWorkspace/gmall/gmall-gateway" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -174,9 +274,17 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="38c854e6-4401-4c48-839d-8c0ccd0fc553" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/gmall-coupon" />
+    </ignored-roots>
     <MESSAGE value="Day 01&#10;init the project" />
     <MESSAGE value="子模块搭建" />
     <option name="LAST_COMMIT_MESSAGE" value="子模块搭建" />

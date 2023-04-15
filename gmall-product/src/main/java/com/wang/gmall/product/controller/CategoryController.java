@@ -1,6 +1,7 @@
 package com.wang.gmall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,15 @@ import com.wang.common.utils.R;
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
+
+    /**
+     * 获取商品分类树
+     */
+    @RequestMapping("/tree")
+    public List<CategoryEntity> getCategoryTree(){
+        List<CategoryEntity> categoryEntities = categoryService.listWithTree();
+        return categoryEntities;
+    }
 
     /**
      * 列表
@@ -76,8 +86,9 @@ public class CategoryController {
      */
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
-
+//		categoryService.removeByIds(Arrays.asList(catIds));
+        //TODO 判断被删数据是否被使用
+        categoryService.removeMenuByIds(Arrays.asList(catIds));
         return R.ok();
     }
 

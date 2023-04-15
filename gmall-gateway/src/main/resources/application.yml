@@ -10,7 +10,15 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
-        - id: test-route
-          uri: https://www.cnblogs.com/wu-song/p/7929595.html
+        - id: product_category_route
+          uri: lb://gmall-product
           predicates:
-            - Query=url,test1
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+        - id: admin_route
+          uri: lb://renren-fast
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>/?.*),/renren-fast/$\{segment}
