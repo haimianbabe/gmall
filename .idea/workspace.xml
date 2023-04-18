@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="子模块搭建">
+      <change afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/valid/AddGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/valid/ListValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/valid/ListValueConstraintValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/valid/UpdateGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/valid/UpdateStatusGroup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/AttrGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/AttrGroupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/BrandController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/entity/BrandEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/entity/BrandEntity.java" afterDir="false" />
     </list>
@@ -18,8 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -179,6 +187,7 @@
       <workItem from="1681523804420" duration="10340000" />
       <workItem from="1681695266773" duration="1410000" />
       <workItem from="1681702486673" duration="12836000" />
+      <workItem from="1681783257168" duration="19556000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>
