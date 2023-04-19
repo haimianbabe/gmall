@@ -3,6 +3,7 @@ package com.wang.gmall.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wang.common.utils.PageUtils;
 import com.wang.gmall.product.entity.CategoryEntity;
+import com.wang.gmall.product.vo.CategoryVO;
 
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ public interface CategoryService extends IService<CategoryEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
 
-    List<CategoryEntity> listWithTree();
+    List<CategoryVO> listWithTree();
 
     void removeMenuByIds(List<Long> catIds);
 }

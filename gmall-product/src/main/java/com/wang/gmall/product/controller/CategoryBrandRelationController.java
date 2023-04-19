@@ -1,8 +1,10 @@
 package com.wang.gmall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,6 +35,18 @@ public class CategoryBrandRelationController {
     /**
      * 列表
      */
+    @RequestMapping("/catelog/list")
+    public R listByBrandId(@RequestParam Long brandId){
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("brand_id",brandId);
+        List<CategoryBrandRelationController> data = categoryBrandRelationService.list(queryWrapper);
+
+        return R.ok().put("data", data);
+    }
+
+    /**
+     * 列表
+     */
     @RequestMapping("/list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = categoryBrandRelationService.queryPage(params);
@@ -56,7 +70,7 @@ public class CategoryBrandRelationController {
      */
     @RequestMapping("/save")
     public R save(@RequestBody CategoryBrandRelationEntity categoryBrandRelation){
-		categoryBrandRelationService.save(categoryBrandRelation);
+		categoryBrandRelationService.saveCatelog(categoryBrandRelation);
 
         return R.ok();
     }

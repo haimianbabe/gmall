@@ -1,8 +1,11 @@
 package com.wang.gmall.product.service.impl;
 
+import com.wang.gmall.product.vo.CategoryVO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -38,12 +41,18 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     }
 
     @Override
-    public List<CategoryEntity> listWithTree() {
+    public List<CategoryVO> listWithTree() {
         List<CategoryEntity> categoryEntities = categoryService.list();
-        List<CategoryEntity> levelMenu = categoryEntities.stream()
+        List<CategoryVO> categoryVOS = new ArrayList<>();
+        for (CategoryEntity categoryEntity : categoryEntities) {
+            CategoryVO categoryVO = new CategoryVO();
+            BeanUtils.copyProperties(categoryEntity, categoryVO);
+            categoryVOS.add(categoryVO);
+        }
+        List<CategoryVO> levelMenu = categoryVOS.stream()
                 .filter(item -> item.getParentCid()==0)
                 .map(menu->{
-                    menu.setChildCategoryEntity(getChildCategory(menu,categoryEntities));
+                    menu.setChildCategoryEntity(getChildCategory(menu,categoryVOS));
                     return menu;
                 })
                 .sorted((menu1,menu2)->{
@@ -59,8 +68,8 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     }
 
 
-    public List<CategoryEntity> getChildCategory(CategoryEntity pCategory,List<CategoryEntity> allCategory){
-        List<CategoryEntity> childMenu = allCategory.stream()
+    public List<CategoryVO> getChildCategory(CategoryVO pCategory,List<CategoryVO> allCategory){
+        List<CategoryVO> childMenu = allCategory.stream()
                 .filter(item->{
                     return item.getParentCid().equals(pCategory.getCatId());
                 })

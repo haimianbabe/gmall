@@ -1,10 +1,11 @@
 package com.wang.gmall.product.controller;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+
+import com.wang.gmall.product.vo.AttrGroupVO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -46,10 +47,10 @@ public class AttrGroupController {
      * 列表
      */
     @RequestMapping("/list/{catId}")
-    public R listByCatId(@PathVariable("catId")String catId){
-        PageUtils page = attrGroupService.queryPage((Map<String, Object>) new QueryWrapper<AttrGroupEntity>().eq("catelog_id",catId));
+    public R listByCatId(@RequestParam Map<String, Object> params,@PathVariable("catId") Long catId){
+        PageUtils page = attrGroupService.queryPage(params,catId);
 
-        return R.ok().put("data", page);
+        return R.ok().put("page", page);
     }
 
     /**
@@ -58,8 +59,11 @@ public class AttrGroupController {
     @RequestMapping("/info/{attrGroupId}")
     public R info(@PathVariable("attrGroupId") Long attrGroupId){
 		AttrGroupEntity attrGroup = attrGroupService.getById(attrGroupId);
-
-        return R.ok().put("attrGroup", attrGroup);
+        Long[] catlogPath = attrGroupService.getCategoryPath(attrGroup.getCatelogId());
+        AttrGroupVO attrGroupVO = new AttrGroupVO();
+        BeanUtils.copyProperties(attrGroup,attrGroupVO);
+        attrGroupVO.setCatlogPath(catlogPath);
+        return R.ok().put("attrGroup", attrGroupVO);
     }
 
     /**

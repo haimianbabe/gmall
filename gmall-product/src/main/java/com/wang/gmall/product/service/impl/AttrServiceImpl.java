@@ -1,5 +1,6 @@
 package com.wang.gmall.product.service.impl;
 
+import com.alibaba.druid.util.StringUtils;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -24,6 +25,21 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public PageUtils queryPage(Map<String, Object> params, String attrType, Long catId) {
+        QueryWrapper<AttrEntity> queryWrapper = new QueryWrapper<AttrEntity>()
+                .eq("attr_type","base".equalsIgnoreCase(attrType)?0:1);
+        if (catId!=0){
+            queryWrapper.eq("catelog_id",catId);
+        }
+        String key = (String) params.get("key");
+        //搜索的模糊查询
+        if (!StringUtils.isEmpty(key)) {
+            queryWrapper.and((wrapper) -> wrapper.eq("attr_id", key).or().like("attr_name", key));
+        }
+        return null;
     }
 
 }

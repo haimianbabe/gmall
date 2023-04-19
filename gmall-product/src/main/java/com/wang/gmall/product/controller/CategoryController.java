@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import com.wang.gmall.product.vo.CategoryVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,9 +36,9 @@ public class CategoryController {
      * 获取商品分类树
      */
     @RequestMapping("/tree")
-    public List<CategoryEntity> getCategoryTree(){
-        List<CategoryEntity> categoryEntities = categoryService.listWithTree();
-        return categoryEntities;
+    public List<CategoryVO> getCategoryTree(){
+        List<CategoryVO> categoryVOS = categoryService.listWithTree();
+        return categoryVOS;
     }
 
     /**

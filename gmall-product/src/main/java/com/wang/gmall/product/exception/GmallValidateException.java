@@ -28,10 +28,10 @@ public class GmallValidateException {
         return R.ok().error(BizCodeEnum.VALID_EXCEPTION.getCode(),BizCodeEnum.VALID_EXCEPTION.getMsg()).put("data",errorMap);
     }
 
-    @ExceptionHandler(value = Throwable.class)
-    public R handleValidException(Throwable throwable) {
-        log.error("Throwable错误，未处理：" + throwable);
-        return R.ok().error(BizCodeEnum.UNKNOW_EXCEPTION.getCode(), BizCodeEnum.UNKNOW_EXCEPTION.getMsg());
-    }
+//    @ExceptionHandler(value = Throwable.class)
+//    public R handleValidException(Throwable throwable) {
+//        log.error("Throwable错误，未处理：" + throwable);
+//        return R.ok().error(BizCodeEnum.UNKNOW_EXCEPTION.getCode(), BizCodeEnum.UNKNOW_EXCEPTION.getMsg());
+//    }
 
 }

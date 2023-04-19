@@ -31,6 +31,16 @@ public class AttrController {
     private AttrService attrService;
 
     /**
+     * 获取规格参数或销售属性
+     */
+    @RequestMapping("/{attrType}/list/{catId}")
+    public R attrInfo(@RequestParam Map<String, Object> params,@PathVariable("attrType")String attrType,@PathVariable("catId")Long catId){
+        PageUtils page = attrService.queryPage(params,attrType,catId);
+
+        return R.ok().put("page", page);
+    }
+
+    /**
      * 列表
      */
     @RequestMapping("/list")
