@@ -6,21 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="子模块搭建">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/ProductMain10000.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/ProductMain10000.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/AttrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/AttrController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/AttrGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/AttrGroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/CategoryBrandRelationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/CategoryBrandRelationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/entity/AttrGroupEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/entity/AttrGroupEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/entity/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/entity/CategoryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/exception/GmallValidateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/exception/GmallValidateException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/AttrGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/AttrGroupService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/AttrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/AttrService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/CategoryBrandRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/CategoryBrandRelationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/AttrGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/AttrGroupServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/AttrServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/AttrServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryBrandRelationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryBrandRelationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +62,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-ware/src/main/resources" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IdeaWorkspace\gmall\gmall-ware\src\main\resources" />
@@ -91,7 +86,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductMain10000">
+  <component name="RunManager" selected="Spring Boot.GatewayMain88">
     <configuration name="CouponMain7000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gmall-coupon" />
       <extension name="coverage">
@@ -144,7 +139,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndTriggerFile" />
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -208,7 +202,9 @@
       <workItem from="1681695266773" duration="1410000" />
       <workItem from="1681702486673" duration="12836000" />
       <workItem from="1681783257168" duration="19632000" />
-      <workItem from="1681867715861" duration="22930000" />
+      <workItem from="1681867715861" duration="23255000" />
+      <workItem from="1681954576402" duration="22577000" />
+      <workItem from="1682040828648" duration="2505000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>
@@ -273,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681810839063</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="子模块搭建">
+      <created>1681897029742</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681897029742</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

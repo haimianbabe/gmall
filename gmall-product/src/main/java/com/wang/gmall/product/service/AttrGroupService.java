@@ -2,8 +2,10 @@ package com.wang.gmall.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wang.common.utils.PageUtils;
+import com.wang.gmall.product.entity.AttrEntity;
 import com.wang.gmall.product.entity.AttrGroupEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,6 +23,10 @@ public interface AttrGroupService extends IService<AttrGroupEntity> {
 
     Long[] getCategoryPath(Long catId);
 
+    List<AttrEntity> attrRelation(Long attrGroupId);
 
+    PageUtils attrNoRelation(Map<String, Object> params,Long attrGroupId);
+
+    void addRelation(List<Map<String, Long>> params);
 }
 

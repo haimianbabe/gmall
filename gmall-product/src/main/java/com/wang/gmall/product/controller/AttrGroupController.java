@@ -1,9 +1,11 @@
 package com.wang.gmall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 
+import com.wang.gmall.product.entity.AttrEntity;
 import com.wang.gmall.product.vo.AttrGroupVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,11 +61,44 @@ public class AttrGroupController {
     @RequestMapping("/info/{attrGroupId}")
     public R info(@PathVariable("attrGroupId") Long attrGroupId){
 		AttrGroupEntity attrGroup = attrGroupService.getById(attrGroupId);
+		if(attrGroup==null||attrGroup.getCatelogId()==null){
+		    return R.ok().put("attrGroup","");
+        }
         Long[] catlogPath = attrGroupService.getCategoryPath(attrGroup.getCatelogId());
         AttrGroupVO attrGroupVO = new AttrGroupVO();
         BeanUtils.copyProperties(attrGroup,attrGroupVO);
         attrGroupVO.setCatlogPath(catlogPath);
         return R.ok().put("attrGroup", attrGroupVO);
+    }
+
+    /**
+     * 查询分组关联属性
+     */
+    @RequestMapping("{attrGroupId}/attr/relation")
+    public R attrRelation(@PathVariable("attrGroupId") Long attrGroupId){
+        List<AttrEntity> attrEntityList = attrGroupService.attrRelation(attrGroupId);
+
+        return R.ok().put("data",attrEntityList);
+    }
+
+    /**
+     * 查询分组没有关联的属性
+     */
+    @RequestMapping("{attrGroupId}/noattr/relation")
+    public R attrNoRelation(@RequestParam Map<String, Object> params,@PathVariable("attrGroupId") Long attrGroupId){
+        PageUtils pages = attrGroupService.attrNoRelation(params,attrGroupId);
+
+        return R.ok().put("page",pages);
+    }
+
+    /**
+     * 新增关联
+     */
+    @RequestMapping("/attr/relation")
+    public R addRelation(@RequestBody List<Map<String, Long>> params){
+        attrGroupService.addRelation(params);
+
+        return R.ok();
     }
 
     /**
