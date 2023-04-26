@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.wang.gmall.product.entity.BrandEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -31,6 +32,16 @@ import com.wang.common.utils.R;
 public class CategoryBrandRelationController {
     @Autowired
     private CategoryBrandRelationService categoryBrandRelationService;
+
+    /**
+     * 根据分类id查品牌
+     */
+    @RequestMapping("/brands/list")
+    public R listByCatId(@RequestParam Long catId){
+        List<BrandEntity> brandEntities = categoryBrandRelationService.listByCatId(catId);
+
+        return R.ok().put("data", brandEntities);
+    }
 
     /**
      * 列表

@@ -1,10 +1,15 @@
 package com.wang.gmall.product.service.impl;
 
+import com.wang.gmall.product.entity.BrandEntity;
 import com.wang.gmall.product.service.BrandService;
 import com.wang.gmall.product.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -45,6 +50,15 @@ public class CategoryBrandRelationServiceImpl extends ServiceImpl<CategoryBrandR
         categoryBrandRelation.setBrandName(brandName);
         categoryBrandRelation.setCatelogName(cateName);
         this.save(categoryBrandRelation);
+    }
+
+    @Override
+    public List<BrandEntity> listByCatId(Long catId) {
+        List<CategoryBrandRelationEntity> categoryBrandRelationEntities = this.list(new QueryWrapper<CategoryBrandRelationEntity>().eq("catelog_id",catId));
+        List<BrandEntity> list = categoryBrandRelationEntities.stream().map((entity)->{
+            return brandService.getById(entity.getBrandId());
+        }).collect(Collectors.toList());
+        return list;
     }
 
 }

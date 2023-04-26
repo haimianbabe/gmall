@@ -2,8 +2,10 @@ package com.wang.gmall.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wang.common.utils.PageUtils;
+import com.wang.gmall.product.entity.BrandEntity;
 import com.wang.gmall.product.entity.CategoryBrandRelationEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -18,5 +20,7 @@ public interface CategoryBrandRelationService extends IService<CategoryBrandRela
     PageUtils queryPage(Map<String, Object> params);
 
     void saveCatelog(CategoryBrandRelationEntity categoryBrandRelation);
+
+    List<BrandEntity> listByCatId(Long catId);
 }
 
