@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="子模块搭建">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/CategoryBrandRelationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/CategoryBrandRelationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/CategoryBrandRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/CategoryBrandRelationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryBrandRelationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryBrandRelationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/service/impl/UpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/service/impl/UpServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +58,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (3)" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-ware/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="ReactorSettings">
@@ -87,7 +87,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RenrenApplication">
+  <component name="RunManager" selected="Spring Boot.SearchMain12000">
     <configuration name="CouponMain7000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="gmall-coupon" />
       <extension name="coverage">
@@ -168,6 +168,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchMain12000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gmall-search" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wang.gmall.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.search.SearchMain12000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WareMain11000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gmall-ware" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.ware.WareMain11000" />
@@ -184,11 +197,13 @@
       <item itemvalue="Spring Boot.CouponMain7000" />
       <item itemvalue="Spring Boot.GatewayMain88" />
       <item itemvalue="Spring Boot.ProductMain10000" />
+      <item itemvalue="Spring Boot.SearchMain12000" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ProductMain10000" />
+        <item itemvalue="Spring Boot.SearchMain12000" />
         <item itemvalue="Spring Boot.GatewayMain88" />
+        <item itemvalue="Spring Boot.ProductMain10000" />
         <item itemvalue="Spring Boot.CouponMain7000" />
       </list>
     </recent_temporary>
@@ -219,7 +234,8 @@
       <workItem from="1682213507981" duration="5003000" />
       <workItem from="1682396586378" duration="2748000" />
       <workItem from="1682472785637" duration="17000" />
-      <workItem from="1682497399517" duration="3336000" />
+      <workItem from="1682497399517" duration="3693000" />
+      <workItem from="1682559188720" duration="13067000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>
@@ -298,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682045247017</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="子模块搭建">
+      <created>1682501100479</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682501100479</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

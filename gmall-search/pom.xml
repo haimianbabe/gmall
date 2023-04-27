@@ -35,6 +35,14 @@
                     <groupId>com.baomidou</groupId>
                     <artifactId>mybatis-plus-boot-starter</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>com.alibaba</groupId>
+                    <artifactId>druid</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <!--es的客户端elasticsearch-rest-high-level-client-->
