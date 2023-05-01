@@ -67,6 +67,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         categoryDao.deleteBatchIds(catIds);
     }
 
+    @Override
+    public List<CategoryEntity> getLevel1Cate() {
+        QueryWrapper<CategoryEntity> queryWrapper = new QueryWrapper<>();
+        return this.list(queryWrapper.eq("parent_cid","0"));
+    }
+
 
     public List<CategoryVO> getChildCategory(CategoryVO pCategory,List<CategoryVO> allCategory){
         List<CategoryVO> childMenu = allCategory.stream()

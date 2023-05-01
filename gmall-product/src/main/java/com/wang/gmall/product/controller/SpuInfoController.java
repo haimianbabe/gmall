@@ -4,11 +4,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.wang.gmall.product.entity.SpuInfoEntity;
 import com.wang.gmall.product.service.SpuInfoService;
@@ -29,6 +25,16 @@ import com.wang.common.utils.R;
 public class SpuInfoController {
     @Autowired
     private SpuInfoService spuInfoService;
+
+    /**
+     * 上传spu
+     * @param spuId
+     * @return
+     */
+    @PostMapping("/{spuid}/up")
+    public R spuUp(@PathVariable("spuid")Long spuId){
+        return R.ok();
+    }
 
     /**
      * 列表

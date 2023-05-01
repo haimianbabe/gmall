@@ -4,6 +4,7 @@ import com.alibaba.druid.util.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wang.gmall.product.entity.AttrAttrgroupRelationEntity;
 import com.wang.gmall.product.entity.AttrGroupEntity;
+import com.wang.gmall.product.entity.ProductAttrValueEntity;
 import com.wang.gmall.product.service.AttrAttrgroupRelationService;
 import com.wang.gmall.product.service.AttrGroupService;
 import com.wang.gmall.product.service.CategoryService;
@@ -105,6 +106,18 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
 //        AttrGroupEntity attrGroup = attrGroupService.getOne(new QueryWrapper<AttrGroupEntity>().eq("attr_group_name",respVO.getAttrGroupName()));
         attrAttrgroupRelationEntity.setAttrGroupId(respVO.getAttrGroupId());
         attrAttrgroupRelationService.save(attrAttrgroupRelationEntity);
+    }
+
+    @Override
+    public List<Long> selectAttrIds(List<Long> attrKeys) {
+       List<AttrEntity> attrEntities = this.listByIds(attrKeys);
+       List<Long> ret = attrEntities.stream().map(entity->{
+           if(entity.getSearchType()!=null && entity.getSearchType()==1){
+               return entity.getAttrId();
+           }
+           return null;
+       }).collect(Collectors.toList());
+       return ret;
     }
 
 }

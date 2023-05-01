@@ -1,9 +1,12 @@
 package com.wang.gmall.search.service;
 
+import com.wang.common.to.SkuEsModel;
 import org.springframework.stereotype.Service;
 
-@Service
+import java.io.IOException;
+import java.util.List;
+
 public interface UpService {
 
-    public void up(Long spuId);
+    public Boolean up(List<SkuEsModel> skuEsModels) throws IOException;
 }

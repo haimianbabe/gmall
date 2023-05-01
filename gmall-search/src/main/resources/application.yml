@@ -1,7 +1,8 @@
 server:
   port: 12000
 elasticsearch:
-  host: 192.168.216.130
+#  host: 192.168.216.130
+  host: 127.0.0.1
 spring:
   application:
     name: gmall-search
