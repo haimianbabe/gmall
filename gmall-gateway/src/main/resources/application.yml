@@ -22,3 +22,7 @@ spring:
             - Path=/api/**
           filters:
             - RewritePath=/api/(?<segment>/?.*),/renren-fast/$\{segment}
+        - id: index_route
+          uri: lb://gmall-product
+          predicates:
+            - Host=**.gmall.com
