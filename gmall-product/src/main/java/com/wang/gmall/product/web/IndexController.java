@@ -30,7 +30,13 @@ public class IndexController {
     @ResponseBody
     @GetMapping("index/json/catalog.json")
     public Map<String,List<Category2VO>> getCatalogJson() throws InterruptedException {
-        return categoryService.getCategoryMap();
+        return categoryService.getWithSpringCache();
+    }
+
+    @ResponseBody
+    @GetMapping("index/deletecache")
+    public void deleteCache() {
+        categoryService.deleteCache();
     }
 
 }

@@ -7,14 +7,16 @@ import com.wang.gmall.product.vo.Category2VO;
 import com.wang.gmall.product.vo.CategoryVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -82,6 +84,52 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     public List<CategoryEntity> getLevel1Cate() {
         QueryWrapper<CategoryEntity> queryWrapper = new QueryWrapper<>();
         return this.list(queryWrapper.eq("parent_cid","0"));
+    }
+
+    /**
+     * 使用springcache进行缓存
+     * @return
+     */
+    @Cacheable(value = {"category"},key = "#root.methodName",sync = true)
+    public Map<String,List<Category2VO>> getWithSpringCache() throws InterruptedException {
+        return this.getCategoryMap();
+    }
+
+
+    @CacheEvict(value = {"category"},allEntries = true)
+    public void deleteCache(){
+    }
+
+
+    /**
+     * 优化使用缓存，解决缓存击穿问题
+     */
+    public Map<String,List<Category2VO>> getWithLock() throws InterruptedException {
+        //设置只有当前持有锁用户才可以删除锁
+        String uuid = UUID.randomUUID().toString();
+        ValueOperations<String,String> ops = stringRedisTemplate.opsForValue();
+        //设置锁过期时间具有原子性,但是依然存在问题，可能锁过期了还没有执行完查询操作，需要锁自动延期
+        Boolean lock = ops.setIfAbsent("lock",uuid,20000, TimeUnit.MILLISECONDS);
+        if(lock){
+            Map<String,List<Category2VO>> map = getCategoryMap();
+            String lockValue = ops.get("lock");
+            //TODO 使用lua脚本，将删除锁操作和判断锁是否正确拥有原子性
+            String luaScript = "if redis.call(\"get\",KEYS[1]) == ARGV[1] then\n" +
+                    "    return redis.call(\"del\",KEYS[1])\n" +
+                    "else\n" +
+                    "    return 0\n" +
+                    "end";
+            stringRedisTemplate.execute(new DefaultRedisScript<Long>(luaScript,Long.class), Arrays.asList("lock"), lockValue);
+            return map;
+        }else {
+            try {
+                Thread.sleep(1000);
+            }catch (Exception e){
+                System.out.println(e);
+            }
+            //自旋锁
+            return getWithLock();
+        }
     }
 
     /**
