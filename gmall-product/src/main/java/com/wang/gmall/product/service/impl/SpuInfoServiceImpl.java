@@ -68,7 +68,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
         //3、查询允许被检索的属性并封装成attrEsModels
         List<Long> attrIds = attrService.selectAttrIds(new ArrayList<>(attrValueMap.keySet()));
-        List<SkuEsModel.Attrs> attrEsModel = attrIds.stream().map(attrId->{
+        List<SkuEsModel.Attrs> attrEsModel = attrIds.stream().filter(attrId->attrId!=null).map(attrId->{
             SkuEsModel.Attrs attrs = new SkuEsModel.Attrs();
             ProductAttrValueEntity productAttrValueEntity = attrValueMap.get(attrId);
             attrs.setAttrId(productAttrValueEntity.getAttrId());

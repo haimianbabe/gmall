@@ -23,7 +23,7 @@ public class TestController {
 
     @RequestMapping("/test")
     public void upData() throws IOException {
-        RestHighLevelClient client = new GmallElasticSearch().esRestClient();
+        RestHighLevelClient client = new GmallElasticSearch().client();
         IndexRequest indexRequest = new IndexRequest("skumodel");
         SkuEsModel skuEsModel = new SkuEsModel();
         skuEsModel.setSkuId(001L);

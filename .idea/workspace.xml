@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="子模块搭建">
+    <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="缓存：redisson、cache">
+      <change afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/entity/SearchParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/entity/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/vo/AttrVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/vo/BrandVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/vo/CatalogVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/web/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SpuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SpuInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SpuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/config/GmallElasticSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/config/GmallElasticSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/controller/ProductEsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/controller/ProductEsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/service/impl/UpServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search/src/main/java/com/wang/gmall/search/service/impl/UpServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,9 +210,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SearchMain12000" />
         <item itemvalue="Spring Boot.ProductMain10000" />
         <item itemvalue="Spring Boot.GatewayMain88" />
-        <item itemvalue="Spring Boot.SearchMain12000" />
         <item itemvalue="Spring Boot.CouponMain7000" />
       </list>
     </recent_temporary>
@@ -238,7 +245,8 @@
       <workItem from="1682472785637" duration="17000" />
       <workItem from="1682497399517" duration="3693000" />
       <workItem from="1682559188720" duration="13067000" />
-      <workItem from="1683171205113" duration="13906000" />
+      <workItem from="1683171205113" duration="14283000" />
+      <workItem from="1683250355984" duration="18687000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>
@@ -324,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682501100479</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="缓存：redisson、cache">
+      <created>1683192721567</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1683192721567</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +393,8 @@
     </ignored-roots>
     <MESSAGE value="Day 01&#10;init the project" />
     <MESSAGE value="子模块搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="子模块搭建" />
+    <MESSAGE value="缓存：redisson、cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="缓存：redisson、cache" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
