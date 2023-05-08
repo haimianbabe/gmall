@@ -5,6 +5,9 @@ import com.wang.common.utils.R;
 import com.wang.gmall.product.entity.*;
 import com.wang.gmall.product.feign.EsProductFeign;
 import com.wang.gmall.product.service.*;
+import com.wang.gmall.product.vo.SkuItemSaleAttrVO;
+import com.wang.gmall.product.vo.SkuItemVO;
+import com.wang.gmall.product.vo.SpuItemAttrGroupVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -13,6 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -46,6 +50,12 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
     @Resource
     private EsProductFeign esProductFeign;
+
+    @Autowired
+    private SkuImagesService skuImagesService;
+
+    @Autowired
+    private SpuInfoDescService spuInfoDescService;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -100,7 +110,28 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         //5、调用es模块保存数据
         R ret = esProductFeign.esProductUp(upProducts);
         //todo 6、修改sku商品状态，上架状态
-
     }
+
+    @Override
+    public SkuItemVO getItemInfo(Long skuId) {
+        SkuItemVO skuItemVO = new SkuItemVO();
+        //sku基本信息获取
+        SkuInfoEntity skuInfoEntity = skuInfoService.getById(skuId);
+        skuItemVO.setInfo(skuInfoEntity);
+        //sku图片信息
+        List<SkuImagesEntity> imagesEntities = skuImagesService.list(new QueryWrapper<SkuImagesEntity>().eq("sku_id",skuId));
+        skuItemVO.setImages(imagesEntities);
+        //获取spu销售属性组合（颜色、内存）
+        List<SkuItemSaleAttrVO> skuItemSaleAttrVOS = this.baseMapper.listSaleAttrs(skuInfoEntity.getSpuId());
+        skuItemVO.setSaleAttr(skuItemSaleAttrVOS);
+        //获取spu介绍(依赖1)
+        SpuInfoDescEntity spuInfoDescEntity = spuInfoDescService.getById(skuInfoEntity.getSpuId());
+        skuItemVO.setDesc(spuInfoDescEntity);
+        //spu规格参数详情、规格参数分组
+        List<SpuItemAttrGroupVO> spuItemAttrGroupVOS = this.baseMapper.getProductGroupAttrsBySpuId(skuInfoEntity.getSpuId(),skuInfoEntity.getCatalogId());
+        skuItemVO.setGroupAttrs(spuItemAttrGroupVOS);
+        return skuItemVO;
+    }
+
 
 }

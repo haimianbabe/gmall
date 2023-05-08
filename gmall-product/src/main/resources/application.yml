@@ -38,4 +38,10 @@ logging:
     com.wang.gmall: debug
     io.niceseason.gulimall.product: debug
 
+gmall:
+  thread:
+    core-size: 5
+    max-size: 20
+    keep-alive-time: 200
+
 

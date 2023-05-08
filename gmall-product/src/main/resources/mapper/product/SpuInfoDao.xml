@@ -17,4 +17,38 @@
     </resultMap>
 
 
+    <resultMap id="SkuItemSaleAttrMap" type="com.wang.gmall.product.vo.SkuItemSaleAttrVO">
+        <result property="attrId" column="attr_id"/>
+        <result property="attrName" column="attr_name"/>
+        <collection property="attrValues" ofType="com.wang.gmall.product.vo.AttrValueWithSkuIdVO">
+            <result property="attrValue" column="attr_value"/>
+            <result property="skuIds" column="sku_ids"/>
+        </collection>
+    </resultMap>
+
+    <select id="listSaleAttrs" resultMap="SkuItemSaleAttrMap">
+        SELECT attr_id,attr_name,attr_value,GROUP_CONCAT(info.sku_id) sku_ids FROM pms_sku_info info
+        LEFT JOIN pms_sku_sale_attr_value ssav ON info.sku_id=ssav.sku_id
+        WHERE info.spu_id=#{spuId}
+        GROUP BY ssav.attr_id,ssav.attr_name,ssav.attr_value
+    </select>
+
+    <resultMap id="ProductGroupAttrsMap" type="com.wang.gmall.product.vo.SpuItemAttrGroupVO">
+        <result property="groupName" column="attr_group_name"/>
+        <collection property="attrs" ofType="com.wang.gmall.product.vo.AttrVO">
+            <result property="attrId" column="attr_id"/>
+            <result property="attrName" column="attr_name"/>
+            <result property="attrValue" column="attr_value"/>
+        </collection>
+    </resultMap>
+
+    <select id="getProductGroupAttrsBySpuId" resultMap="ProductGroupAttrsMap">
+        SELECT ag.attr_group_name,attr.attr_id,attr.attr_name,attr.attr_value
+        FROM pms_attr_attrgroup_relation aar
+                 LEFT JOIN pms_attr_group ag ON aar.attr_group_id=ag.attr_group_id
+                 LEFT JOIN pms_product_attr_value attr ON aar.attr_id=attr.attr_id
+        WHERE attr.spu_id = #{spuId} AND ag.catelog_id = #{catalogId}
+    </select>
+
+
 </mapper>
