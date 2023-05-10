@@ -1,0 +1,15 @@
+server:
+  port: 20000
+
+spring:
+  application:
+    name: gmall-auth-server
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  thymeleaf:
+    cache: false
+  mvc:
+    static-path-pattern: /static/**

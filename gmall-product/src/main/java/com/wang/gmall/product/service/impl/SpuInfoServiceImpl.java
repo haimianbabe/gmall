@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -56,6 +58,9 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
     @Autowired
     private SpuInfoDescService spuInfoDescService;
+
+    @Resource(name = "myThread")
+    ThreadPoolExecutor executor;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -113,23 +118,42 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     }
 
     @Override
-    public SkuItemVO getItemInfo(Long skuId) {
+    public SkuItemVO getItemInfo(Long skuId) throws ExecutionException, InterruptedException {
         SkuItemVO skuItemVO = new SkuItemVO();
-        //sku基本信息获取
-        SkuInfoEntity skuInfoEntity = skuInfoService.getById(skuId);
-        skuItemVO.setInfo(skuInfoEntity);
+        CompletableFuture<SkuInfoEntity> getBaseInfo = CompletableFuture.supplyAsync(()->{
+            //sku基本信息获取
+            SkuInfoEntity skuInfoEntity = skuInfoService.getById(skuId);
+            skuItemVO.setInfo(skuInfoEntity);
+            return skuInfoEntity;
+        },executor);
+
+        CompletableFuture<String> getSaleAttrs = getBaseInfo.thenApplyAsync(entity->{
+            //获取spu销售属性组合（颜色、内存）
+            List<SkuItemSaleAttrVO> skuItemSaleAttrVOS = this.baseMapper.listSaleAttrs(entity.getSpuId());
+            skuItemVO.setSaleAttr(skuItemSaleAttrVOS);
+            return "成功获取spu销售属性组合";
+        },executor);
+
+        CompletableFuture<String> getSpuInfo = getBaseInfo.thenApplyAsync(entity->{
+            //获取spu介绍(依赖1)
+            SpuInfoDescEntity spuInfoDescEntity = spuInfoDescService.getById(entity.getSpuId());
+            skuItemVO.setDesc(spuInfoDescEntity);
+            return "成功获取spu介绍";
+        },executor);
+
+        CompletableFuture<String> getAttrGroup = getBaseInfo.thenApplyAsync(entity->{
+            //spu规格参数详情、规格参数分组
+            List<SpuItemAttrGroupVO> spuItemAttrGroupVOS = this.baseMapper.getProductGroupAttrsBySpuId(entity.getSpuId(),entity.getCatalogId());
+            skuItemVO.setGroupAttrs(spuItemAttrGroupVOS);
+           return "成功获取spu规格参数详情、规格参数分组";
+        },executor);
+
         //sku图片信息
         List<SkuImagesEntity> imagesEntities = skuImagesService.list(new QueryWrapper<SkuImagesEntity>().eq("sku_id",skuId));
         skuItemVO.setImages(imagesEntities);
-        //获取spu销售属性组合（颜色、内存）
-        List<SkuItemSaleAttrVO> skuItemSaleAttrVOS = this.baseMapper.listSaleAttrs(skuInfoEntity.getSpuId());
-        skuItemVO.setSaleAttr(skuItemSaleAttrVOS);
-        //获取spu介绍(依赖1)
-        SpuInfoDescEntity spuInfoDescEntity = spuInfoDescService.getById(skuInfoEntity.getSpuId());
-        skuItemVO.setDesc(spuInfoDescEntity);
-        //spu规格参数详情、规格参数分组
-        List<SpuItemAttrGroupVO> spuItemAttrGroupVOS = this.baseMapper.getProductGroupAttrsBySpuId(skuInfoEntity.getSpuId(),skuInfoEntity.getCatalogId());
-        skuItemVO.setGroupAttrs(spuItemAttrGroupVOS);
+
+        CompletableFuture.allOf(getSaleAttrs,getSpuInfo,getAttrGroup).get();
+
         return skuItemVO;
     }
 

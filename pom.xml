@@ -20,6 +20,7 @@
         <module>gmall-common</module>
         <module>gmall-gateway</module>
         <module>gmall-search</module>
+        <module>gmall-auth-server</module>
     </modules>
 
 </project>

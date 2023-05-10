@@ -8,6 +8,7 @@ import com.wang.gmall.product.vo.SkuItemVO;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 /**
  * spu信息
@@ -22,7 +23,7 @@ public interface SpuInfoService extends IService<SpuInfoEntity> {
 
     void up(Long spuId);
 
-    SkuItemVO getItemInfo(Long skuId);
+    SkuItemVO getItemInfo(Long skuId) throws ExecutionException, InterruptedException;
 
 }
 

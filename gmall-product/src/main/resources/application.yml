@@ -36,7 +36,6 @@ mybatis-plus:
 logging:
   level:
     com.wang.gmall: debug
-    io.niceseason.gulimall.product: debug
 
 gmall:
   thread:
