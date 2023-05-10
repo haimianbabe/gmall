@@ -5,90 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="缓存：redisson、cache">
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/AuthMain20000.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/service/SmsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/web/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/web/SmsSendController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/bootStrap/bootstrap/js/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/4de5019d2404d347897dee637895d02b_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/4de5019d2404d347897dee637895d02b_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/4de5019d2404d347897dee637895d02b_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/4de5019d2404d347897dee637895d02b_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/4de5019d2404d347897dee637895d02b_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/4de5019d2404d347897dee637895d02b_25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/5731485aN1134b4f0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/a65a18e877a16246a92e1b755bd88a03_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/a65a18e877a16246a92e1b755bd88a03_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/f760f80838eafa4ba85463ce6ce1298d_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/logo1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/phone-orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/qq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/show.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/user_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/user_06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/img/weixin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/AUTHORS.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/external/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/images/ui-icons_444444_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/images/ui-icons_555555_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/images/ui-icons_777620_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/images/ui-icons_777777_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/images/ui-icons_cc0000_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/images/ui-icons_ffffff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/jquery-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/jquery-ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/jquery-ui.structure.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/jquery-ui.structure.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/jquery-ui.theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/jquery-ui.theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/easyUI/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery-1.11.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery-1.7.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery-1.8.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery-1.9.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery-3.1.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery-3.1.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery-3.2.1.slim.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery.form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery.mockjax-1.5.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery.mockjax-2.2.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery.mockjax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/jquery.simulate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/js/jQuery/require.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/libs/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/sass/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/sass/index.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist/sass/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/config/MyThreadConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/config/MyThreadConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SpuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SpuInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SpuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/web/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/web/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/AuthMain20000.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/AuthMain20000.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/web/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/web/SmsSendController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/impl/MemberServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,8 +217,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AuthMain20000" />
-        <item itemvalue="Spring Boot.ProductMain10000" />
         <item itemvalue="Spring Boot.GatewayMain88" />
+        <item itemvalue="Spring Boot.ProductMain10000" />
         <item itemvalue="Application.TestMain" />
         <item itemvalue="Spring Boot.SearchMain12000" />
       </list>
@@ -337,7 +260,7 @@
       <workItem from="1683337107838" duration="15770000" />
       <workItem from="1683509778376" duration="19997000" />
       <workItem from="1683596040427" duration="19162000" />
-      <workItem from="1683682108331" duration="391000" />
+      <workItem from="1683682108331" duration="17141000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>
@@ -437,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683365360400</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="缓存：redisson、cache">
+      <created>1683682523635</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683682523635</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

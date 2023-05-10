@@ -2,6 +2,7 @@ package com.wang.gmall.member.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wang.common.utils.PageUtils;
+import com.wang.common.vo.RegistVO;
 import com.wang.gmall.member.entity.MemberEntity;
 
 import java.util.Map;
@@ -16,5 +17,7 @@ import java.util.Map;
 public interface MemberService extends IService<MemberEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    void regist(RegistVO registVO);
 }
 
