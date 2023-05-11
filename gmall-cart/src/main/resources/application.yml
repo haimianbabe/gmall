@@ -1,0 +1,17 @@
+server:
+  port: 21000
+
+spring:
+  application:
+    name: gmall-cart
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  thymeleaf:
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
+  redis:
+    host: 127.0.0.1
+    port: 6379

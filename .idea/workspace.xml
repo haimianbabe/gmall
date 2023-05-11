@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="缓存：redisson、cache">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/AuthMain20000.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/AuthMain20000.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/web/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-auth-server/src/main/java/com/wang/gmall/auth/web/SmsSendController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/impl/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuSaleAttrValueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuSaleAttrValueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/dao/SkuSaleAttrValueDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/dao/SkuSaleAttrValueDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SkuSaleAttrValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SkuSaleAttrValueService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SkuSaleAttrValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SkuSaleAttrValueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/resources/mapper/product/SkuSaleAttrValueDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/resources/mapper/product/SkuSaleAttrValueDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (3)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-auth-server/src/main/resources/static/regist" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-cart/src/main/resources/static/cart" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -71,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaWorkspace\gmall\gmall-cart\src\main\resources\static\cart" />
+      <recent name="D:\IdeaWorkspace\gmall\gmall-cart\src\main\resources\templates" />
       <recent name="D:\IdeaWorkspace\gmall\gmall-auth-server\src\main\resources\static\regist" />
       <recent name="D:\IdeaWorkspace\gmall\gmall-auth-server\src\main\resources\static.regist" />
       <recent name="D:\IdeaWorkspace\gmall\gmall-auth-server\src\main\resources\templates" />
-      <recent name="D:\IdeaWorkspace\gmall\gmall-ware\src\main\resources" />
-      <recent name="D:\IdeaWorkspace\gmall\gmall-product\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wang.gmall.gateway.config" />
@@ -90,7 +91,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthMain20000">
+  <component name="RunManager" selected="Spring Boot.CartMain21000">
     <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.wang.gmall.product.TestMain" />
       <module name="gmall-product" />
@@ -113,6 +114,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.auth.AuthMain20000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartMain21000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gmall-cart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wang.gmall.cart.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.cart.CartMain21000" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,19 +196,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchMain12000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="gmall-search" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.wang.gmall.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.search.SearchMain12000" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WareMain11000" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gmall-ware" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.gmall.ware.WareMain11000" />
@@ -211,16 +212,16 @@
       <item itemvalue="Spring Boot.WareMain11000" />
       <item itemvalue="Spring Boot.GatewayMain88" />
       <item itemvalue="Spring Boot.ProductMain10000" />
-      <item itemvalue="Spring Boot.SearchMain12000" />
       <item itemvalue="Spring Boot.AuthMain20000" />
+      <item itemvalue="Spring Boot.CartMain21000" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AuthMain20000" />
+        <item itemvalue="Spring Boot.CartMain21000" />
         <item itemvalue="Spring Boot.GatewayMain88" />
+        <item itemvalue="Spring Boot.AuthMain20000" />
         <item itemvalue="Spring Boot.ProductMain10000" />
         <item itemvalue="Application.TestMain" />
-        <item itemvalue="Spring Boot.SearchMain12000" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +261,8 @@
       <workItem from="1683337107838" duration="15770000" />
       <workItem from="1683509778376" duration="19997000" />
       <workItem from="1683596040427" duration="19162000" />
-      <workItem from="1683682108331" duration="17141000" />
+      <workItem from="1683682108331" duration="17980000" />
+      <workItem from="1683768750766" duration="19681000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>
@@ -367,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683682523635</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="缓存：redisson、cache">
+      <created>1683710232997</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1683710232997</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

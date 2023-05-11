@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/gmall-auth-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-cart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-coupon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-gateway/src/main/java" charset="UTF-8" />

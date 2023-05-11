@@ -1,6 +1,7 @@
 package com.wang.gmall.product.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,14 @@ import com.wang.common.utils.R;
 public class SkuSaleAttrValueController {
     @Autowired
     private SkuSaleAttrValueService skuSaleAttrValueService;
+
+    /**
+     * 获取属性分组字符串
+     */
+    @RequestMapping("/getSkuAttrs/{skuId}")
+    public List<String> getSkuAttrs(@PathVariable Long skuId){
+        return skuSaleAttrValueService.getSkuAttrs(skuId);
+    }
 
     /**
      * 列表
