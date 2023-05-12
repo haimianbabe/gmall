@@ -11,45 +11,45 @@ public class SkuInfoVO {
     /**
      * skuId
      */
-    private Long skuId;
+    public Long skuId;
     /**
      * spuId
      */
-    private Long spuId;
+    public Long spuId;
     /**
      * sku名称
      */
-    private String skuName;
+    public String skuName;
     /**
      * sku介绍描述
      */
-    private String skuDesc;
+    public String skuDesc;
     /**
      * 所属分类id
      */
-    private Long catalogId;
+    public Long catalogId;
     /**
      * 品牌id
      */
-    private Long brandId;
+    public Long brandId;
     /**
      * 默认图片
      */
-    private String skuDefaultImg;
+    public String skuDefaultImg;
     /**
      * 标题
      */
-    private String skuTitle;
+    public String skuTitle;
     /**
      * 副标题
      */
-    private String skuSubtitle;
+    public String skuSubtitle;
     /**
      * 价格
      */
-    private BigDecimal price;
+    public BigDecimal price;
     /**
      * 销量
      */
-    private Long saleCount;
+    public Long saleCount;
 }

@@ -3,6 +3,8 @@ package com.wang.gmall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.wang.common.vo.SkuInfoVO;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +31,17 @@ import com.wang.common.utils.R;
 public class SkuInfoController {
     @Autowired
     private SkuInfoService skuInfoService;
+
+    /**
+     * 获取skuInfo
+     */
+    @RequestMapping("/{skuId}")
+    public R skuInfo(@PathVariable("skuId") Long skuId){
+        SkuInfoEntity skuInfo = skuInfoService.getById(skuId);
+        SkuInfoVO skuInfoVO = new SkuInfoVO();
+        BeanUtils.copyProperties(skuInfo,skuInfoVO);
+        return R.ok().put("skuInfo", skuInfoVO);
+    }
 
     /**
      * 列表

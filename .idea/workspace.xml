@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="缓存：redisson、cache">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/config/MyThreadConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/config/ThreadPoolConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/vo/CartItemVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuSaleAttrValueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuSaleAttrValueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/dao/SkuSaleAttrValueDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/dao/SkuSaleAttrValueDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SkuSaleAttrValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SkuSaleAttrValueService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SkuSaleAttrValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SkuSaleAttrValueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/service/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/web/CertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/web/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/utils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/utils/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/vo/CartVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/vo/CartVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/vo/SkuInfoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/vo/SkuInfoVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-product/src/main/resources/mapper/product/SkuSaleAttrValueDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/resources/mapper/product/SkuSaleAttrValueDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +85,7 @@
       <recent name="D:\IdeaWorkspace\gmall\gmall-auth-server\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wang.gmall.cart.config" />
       <recent name="com.wang.gmall.gateway.config" />
       <recent name="com.wang.common.validator.group" />
       <recent name="com.wang.gmall.common.utils" />
@@ -218,9 +225,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.CartMain21000" />
+        <item itemvalue="Spring Boot.ProductMain10000" />
         <item itemvalue="Spring Boot.GatewayMain88" />
         <item itemvalue="Spring Boot.AuthMain20000" />
-        <item itemvalue="Spring Boot.ProductMain10000" />
         <item itemvalue="Application.TestMain" />
       </list>
     </recent_temporary>
@@ -262,7 +269,8 @@
       <workItem from="1683509778376" duration="19997000" />
       <workItem from="1683596040427" duration="19162000" />
       <workItem from="1683682108331" duration="17980000" />
-      <workItem from="1683768750766" duration="19681000" />
+      <workItem from="1683768750766" duration="20014000" />
+      <workItem from="1683854839524" duration="21386000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>
@@ -376,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683710232997</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="缓存：redisson、cache">
+      <created>1683797888737</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1683797888737</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

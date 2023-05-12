@@ -15,3 +15,9 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+
+gmall:
+  thread:
+    core-size: 5
+    max-size: 20
+    keep-alive-time: 200

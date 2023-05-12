@@ -7,39 +7,90 @@ import java.util.List;
 
 @Data
 public class CartVO {
-
-    private Long skuId;
-
-    //是否选中
-    private Boolean check = true;
-
-    //标题
-    private String title;
-
-    //图片
-    private String image;
-
-    //商品套餐属性
-    private List<String> skuAttrValues;
-
-    //价格
-    private BigDecimal price;
-
-    //数量
-    private Integer count;
-
-    //总价
-    private BigDecimal totalPrice;
+    /**
+     * 购物车子项信息
+     */
+    List<CartItemVO> items;
 
     /**
-     * 当前购物车项总价等于单价x数量
-     * @return
+     * 商品数量
      */
-    public BigDecimal getTotalPrice() {
-        return price.multiply(new BigDecimal(count));
+    private Integer countNum;
+
+    /**
+     * 商品类型数量
+     */
+    private Integer countType;
+
+    /**
+     * 商品总价
+     */
+    private BigDecimal totalAmount;
+
+    /**
+     * 减免价格
+     */
+    private BigDecimal reduce = new BigDecimal("0.00");
+
+    public List<CartItemVO> getItems() {
+        return items;
     }
 
-    public void setTotalPrice(BigDecimal totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setItems(List<CartItemVO> items) {
+        this.items = items;
+    }
+
+    //总数量=遍历每个购物项总和
+    public Integer getCountNum() {
+        int count=0;
+        if (items != null && items.size() > 0) {
+            for (CartItemVO item : items) {
+                count += item.getCount();
+            }
+        }
+        return count;
+    }
+
+    public void setCountNum(Integer countNum) {
+        this.countNum = countNum;
+    }
+
+    //商品类型数量=遍历所有商品类型和
+    public Integer getCountType() {
+        int count=0;
+        if (items != null && items.size() > 0) {
+            for (CartItemVO item : items) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+    public void setCountType(Integer countType) {
+        this.countType = countType;
+    }
+
+    //总价为单个购物项总价-优惠
+    public BigDecimal getTotalAmount() {
+        BigDecimal total = new BigDecimal(0);
+        if (items != null && items.size() > 0) {
+            for (CartItemVO item : items) {
+                total.add(item.getTotalPrice());
+            }
+        }
+        total.subtract(reduce);
+        return total;
+    }
+
+    public void setTotalAmount(BigDecimal totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public BigDecimal getReduce() {
+        return reduce;
+    }
+
+    public void setReduce(BigDecimal reduce) {
+        this.reduce = reduce;
     }
 }
