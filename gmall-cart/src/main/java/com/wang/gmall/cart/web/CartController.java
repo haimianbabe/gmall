@@ -47,9 +47,36 @@ public class CartController {
      * 获取购物车商品列表
      */
     @RequestMapping("/cartList")
-    public String cartList(Model model){
+    public String cartList(Model model) throws ExecutionException, InterruptedException {
         CartVO cartVO = cartService.cartList();
         model.addAttribute("cart",cartVO);
         return "cartList";
+    }
+
+    /**
+     * 选中商品
+     */
+    @RequestMapping("/checkCart")
+    public String checkCart(@RequestParam("skuId") Long skuId){
+        cartService.checkCart(skuId);
+        return "redirect:/cart/cartList";
+    }
+
+    /**
+     * 修改购物车商品数量
+     */
+    @RequestMapping("/countItem")
+    public String changeCount(@RequestParam("skuId") Long skuId,@RequestParam("num") Integer num){
+        cartService.changeCount(skuId,num);
+        return "redirect:/cart/cartList";
+    }
+
+    /**
+     * 删除购物项
+     */
+    @RequestMapping("/deleteItem")
+    public String deleteItem(@RequestParam("skuId") Long skuId){
+        cartService.deleteItem(skuId);
+        return "redirect:/cart/cartList";
     }
 }

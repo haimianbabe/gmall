@@ -26,10 +26,12 @@ public class CartInterceptor implements HandlerInterceptor {
         userInfoTo.setUserId("10002");
         //如果cookie中有user-key则放入userInfoTo
         Cookie[] cookies = request.getCookies();
-        for (Cookie cookie:cookies){
-            if(cookie.getName().equals(CartConstant.TEMP_USER_COOKIE_NAME)){
-                userInfoTo.setIsTempUser(true);
-                userInfoTo.setUserKey(cookie.getValue());
+        if (cookies != null && cookies.length > 0){
+            for (Cookie cookie:cookies){
+                if(cookie.getName().equals(CartConstant.TEMP_USER_COOKIE_NAME)){
+                    userInfoTo.setIsTempUser(true);
+                    userInfoTo.setUserKey(cookie.getValue());
+                }
             }
         }
         //如果没有user-key则生成

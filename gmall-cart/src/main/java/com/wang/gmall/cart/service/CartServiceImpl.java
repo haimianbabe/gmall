@@ -92,31 +92,60 @@ public class CartServiceImpl implements CartService{
      * @return
      */
     @Override
-    public CartVO cartList() {
-        String cartKey = null;
-        UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
-        //获取购物车所有项
-        BoundHashOperations<String, Object, Object> cartOps = getCartOps();
+    public CartVO cartList() throws ExecutionException, InterruptedException {
         CartVO cartVO = new CartVO();
-        List<CartItemVO> itemList = null;
-        List<Object> cartItems = cartOps.values();
-        if (cartItems!=null&cartItems.size()>0){
-            itemList = cartItems.stream().map(obj->{
-                String item = (String) obj;
-                return JSON.parseObject(item,CartItemVO.class);
-            }).collect(Collectors.toList());
-            cartVO.setItems(itemList);
-        }
-        if (userInfoTo!=null){
-            //若登录使用userid作为购物车名,并且将临时购物车合并
-            String userId = userInfoTo.getUserId();
-            cartKey = CartConstant.TEMP_USER_COOKIE_NAME + userId;
+        UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
+        //获取临时购物车所有项
+        List<CartItemVO> tempCart = getCartByKey(CART_PREFIX + userInfoTo.getUserKey());
+        if (userInfoTo.getUserId()!=null){
+            //若登录使用userid作为购物车名,并且将临时购物车合并，删除临时购物车
+            if (tempCart!=null&&tempCart.size() > 0){
+                for (CartItemVO item : tempCart){
+                    addCartItem(item.getSkuId(),item.getCount());
+                }
+            }
+            List<CartItemVO> userCartItems = getCartByKey(CART_PREFIX + userInfoTo.getUserId());
+            cartVO.setItems(userCartItems);
+            //清空购物车
+            redisTemplate.delete(CART_PREFIX + userInfoTo.getUserKey());
+            return cartVO;
         }else {
-            //若没登录使用user-key作为购物车名
+            //若没登录直接返回临时购物车
+            cartVO.setItems(tempCart);
             return cartVO;
         }
-        //清空购物车
-        return null;
+    }
+
+    /**
+     * 选中购物项
+     * @param skuId
+     */
+    @Override
+    public void checkCart(Long skuId) {
+        CartItemVO cartItemVO = getItemBySkuId(skuId);
+        cartItemVO.setCheck(!cartItemVO.getCheck());
+        getCartOps().put(skuId.toString(),JSON.toJSONString(cartItemVO));
+    }
+
+    /**
+     * 修改商品数量
+     * @param skuId
+     * @param num
+     */
+    @Override
+    public void changeCount(Long skuId, Integer num) {
+        CartItemVO cartItemVO = getItemBySkuId(skuId);
+        cartItemVO.setCount(num);
+        getCartOps().put(skuId.toString(),JSON.toJSONString(cartItemVO));
+    }
+
+    /**
+     * 删除购物项
+     * @param skuId
+     */
+    @Override
+    public void deleteItem(Long skuId) {
+        getCartOps().delete(skuId.toString());
     }
 
     /**
@@ -133,7 +162,33 @@ public class CartServiceImpl implements CartService{
                 cartKey = CART_PREFIX + userInfoTo.getUserKey();
             }
         }
-        BoundHashOperations<String,Object,Object> boundHashOperations = redisTemplate.boundHashOps(cartKey);
-        return boundHashOperations;
+        return redisTemplate.boundHashOps(cartKey);
+    }
+
+    /**
+     * 获取临时或用户购物车
+     * @param key
+     * @return
+     */
+    public List<CartItemVO> getCartByKey(String key){
+        List<CartItemVO> cart = null;
+        BoundHashOperations<String,Object,Object> cartOps = redisTemplate.boundHashOps(key);
+        List<Object> cartItems = cartOps.values();
+        if (cartItems!=null&cartItems.size()>0){
+            cart = cartItems.stream().map(obj->{
+                String item = (String) obj;
+                return JSON.parseObject(item,CartItemVO.class);
+            }).collect(Collectors.toList());
+        }
+        return cart;
+    }
+
+    /**
+     * 根据skuid获取当前商品项
+     */
+    public CartItemVO getItemBySkuId(Long skuId){
+        BoundHashOperations<String, Object, Object> cartOps = getCartOps();
+        String cartItem = (String) cartOps.get(skuId.toString());
+        return JSON.parseObject(cartItem, CartItemVO.class);
     }
 }
