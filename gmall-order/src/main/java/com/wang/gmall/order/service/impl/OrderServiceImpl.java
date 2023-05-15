@@ -1,5 +1,6 @@
 package com.wang.gmall.order.service.impl;
 
+import com.wang.gmall.order.vo.OrderConfirmVo;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -24,6 +25,16 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public OrderConfirmVo getConfirmVo() {
+        OrderConfirmVo orderConfirmVo = new OrderConfirmVo();
+        //查出所有商品
+        //查出所有地址
+        //库存
+        //防重令牌
+        return orderConfirmVo;
     }
 
 }
