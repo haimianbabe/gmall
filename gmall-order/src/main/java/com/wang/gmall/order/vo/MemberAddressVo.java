@@ -3,7 +3,9 @@ package com.wang.gmall.order.vo;
 import lombok.Data;
 
 /**
- * 用户地址vo
+ * 会员收货地址
+ * @author starsea
+ * @date 2022-05-08
  */
 @Data
 public class MemberAddressVo {
@@ -49,5 +51,4 @@ public class MemberAddressVo {
      * 是否默认
      */
     private Integer defaultStatus;
-
 }

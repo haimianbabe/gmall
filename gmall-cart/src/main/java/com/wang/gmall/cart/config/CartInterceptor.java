@@ -1,8 +1,8 @@
 package com.wang.gmall.cart.config;
 
 import com.mysql.cj.util.StringUtils;
+import com.wang.common.constant.CartConstant;
 import com.wang.common.to.UserInfoTo;
-import com.wang.gmall.cart.constant.CartConstant;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.Cookie;

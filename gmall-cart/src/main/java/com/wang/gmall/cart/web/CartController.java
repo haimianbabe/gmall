@@ -1,16 +1,21 @@
 package com.wang.gmall.cart.web;
 
+import com.wang.common.utils.R;
 import com.wang.common.vo.CartItemVO;
 import com.wang.common.vo.CartVO;
 import com.wang.gmall.cart.service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 @RequestMapping("/cart")
 @Controller
@@ -78,5 +83,16 @@ public class CartController {
     public String deleteItem(@RequestParam("skuId") Long skuId){
         cartService.deleteItem(skuId);
         return "redirect:/cart/cartList";
+    }
+
+    /**
+     * 获取购物车选中商品列表
+     */
+    @RequestMapping("/checkedList")
+    @ResponseBody
+    public List<CartItemVO> checkedList() throws ExecutionException, InterruptedException {
+        CartVO cartVO = cartService.cartList();
+        List<CartItemVO> items = cartVO.getItems();
+        return items.stream().filter(item-> item.getCheck()).collect(Collectors.toList());
     }
 }
