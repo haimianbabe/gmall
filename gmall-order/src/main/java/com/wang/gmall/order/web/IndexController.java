@@ -16,11 +16,11 @@ public class IndexController {
     @Autowired
     OrderService orderService;
 
-    @RequestMapping("/toConfirm")
-    public String toConfirm(){
-        return "confirm";
-    }
-
+    /**
+     * 订单准备提交页
+     * @param model
+     * @return
+     */
     @RequestMapping("/toTrade")
     public String toTrade(Model model){
         OrderConfirmVo orderConfirmVo = orderService.getConfirmVo();
@@ -36,6 +36,9 @@ public class IndexController {
     @RequestMapping("/submitOrder")
     public String submitOrder(OrderSubmitVo submitVo, Model model, RedirectAttributes attributes){
         try{
+            /**
+             * 提交订单返回状态码
+             */
             SubmitOrderResponseVo responseVo=orderService.submitOrder(submitVo);
             Integer code = responseVo.getCode();
             if (code==0){

@@ -1,5 +1,8 @@
 package com.wang.gmall.product.service.impl;
 
+import com.wang.gmall.product.entity.SpuInfoEntity;
+import com.wang.gmall.product.service.SpuInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +21,9 @@ import com.wang.gmall.product.service.SkuSaleAttrValueService;
 @Service("skuSaleAttrValueService")
 public class SkuSaleAttrValueServiceImpl extends ServiceImpl<SkuSaleAttrValueDao, SkuSaleAttrValueEntity> implements SkuSaleAttrValueService {
 
+    @Autowired
+    SpuInfoService spuInfoService;
+
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
         IPage<SkuSaleAttrValueEntity> page = this.page(
@@ -32,5 +38,6 @@ public class SkuSaleAttrValueServiceImpl extends ServiceImpl<SkuSaleAttrValueDao
     public List<String> getSkuAttrs(Long skuId) {
         return this.baseMapper.getSkuAttrs(skuId);
     }
+
 
 }

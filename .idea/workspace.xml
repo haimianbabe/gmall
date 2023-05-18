@@ -6,18 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="0b374c87-292d-4507-81c6-5cbf41797268" name="Changes" comment="缓存：redisson、cache">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/config/CartInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/config/CartInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/constant/CartConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/web/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart/src/main/java/com/wang/gmall/cart/web/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/to/UserInfoTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/to/UserInfoTo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/controller/MemberReceiveAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/controller/MemberReceiveAddressController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/MemberReceiveAddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/MemberReceiveAddressService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/impl/MemberReceiveAddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-member/src/main/java/com/wang/gmall/member/service/impl/MemberReceiveAddressServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/OrderMain9000.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/OrderMain9000.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/config/LoginUserInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/config/LoginUserInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/feign/MemberFeignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/feign/MemberFeignService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/vo/MemberAddressVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/vo/MemberAddressVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/vo/OrderSubmitVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/vo/OrderSubmitVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/vo/SubmitOrderResponseVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/vo/SubmitOrderResponseVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/web/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order/src/main/java/com/wang/gmall/order/web/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuSaleAttrValueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/controller/SkuSaleAttrValueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SkuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SkuInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SkuSaleAttrValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/SkuSaleAttrValueService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SkuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SkuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SkuSaleAttrValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-product/src/main/java/com/wang/gmall/product/service/impl/SkuSaleAttrValueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/controller/WareSkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/controller/WareSkuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/dao/WareSkuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/dao/WareSkuDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/service/WareSkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/service/WareSkuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/service/impl/WareSkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-ware/src/main/java/com/wang/gmall/ware/service/impl/WareSkuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-ware/src/main/resources/mapper/ware/WareSkuDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-ware/src/main/resources/mapper/ware/WareSkuDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +74,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (3)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/constant" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-common/src/main/java/com/wang/common/to" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -77,17 +85,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IdeaWorkspace\gmall\gmall-common\src\main\java\com\wang\common\constant" />
+      <recent name="D:\IdeaWorkspace\gmall\gmall-common\src\main\java\com\wang\common\to" />
+      <recent name="D:\IdeaWorkspace\gmall\gmall-ware\src\main\java\com\wang\gmall\ware\vo" />
       <recent name="D:\IdeaWorkspace\gmall\gmall-order\src\main\java\com\wang\gmall\order\vo" />
-      <recent name="D:\IdeaWorkspace\gmall\gmall-cart\src\main\resources\static\cart" />
-      <recent name="D:\IdeaWorkspace\gmall\gmall-cart\src\main\resources\templates" />
-      <recent name="D:\IdeaWorkspace\gmall\gmall-auth-server\src\main\resources\static\regist" />
+      <recent name="D:\IdeaWorkspace\gmall\gmall-order\src\main\java\com\wang\gmall\order\to" />
+      <recent name="D:\IdeaWorkspace\gmall\gmall-common\src\main\java\com\wang\common\constant" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wang.gmall.ware.vo" />
+      <recent name="com.wang.gmall.order.feign" />
       <recent name="com.wang.gmall.cart.config" />
       <recent name="com.wang.gmall.gateway.config" />
       <recent name="com.wang.common.validator.group" />
-      <recent name="com.wang.gmall.common.utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -271,6 +280,8 @@
       <workItem from="1683768750766" duration="20014000" />
       <workItem from="1683854839524" duration="21386000" />
       <workItem from="1684200384078" duration="21718000" />
+      <workItem from="1684286912952" duration="20783000" />
+      <workItem from="1684372907634" duration="16189000" />
     </task>
     <task id="LOCAL-00001" summary="Day 01&#10;init the project">
       <created>1680946459218</created>

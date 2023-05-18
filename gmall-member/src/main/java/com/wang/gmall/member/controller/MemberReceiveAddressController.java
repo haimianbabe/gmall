@@ -32,10 +32,19 @@ public class MemberReceiveAddressController {
     private MemberReceiveAddressService memberReceiveAddressService;
 
     /**
+     * 根据地址id获取地址
+     */
+    @RequestMapping("/getById/{id}")
+    public MemberReceiveAddressEntity getById(@PathVariable("id") Long id){
+        MemberReceiveAddressEntity memberReceiveAddress = memberReceiveAddressService.getById(id);
+        return memberReceiveAddress;
+    }
+
+    /**
      * 根据用户id获取地址
      */
     @RequestMapping("/getById/{userId}")
-    public List<MemberReceiveAddressEntity> getAdressById(@PathVariable("userId") String userId){
+    public List<MemberReceiveAddressEntity> getAdressById(@PathVariable("userId") Long userId){
         return memberReceiveAddressService.getAdressById(userId);
     }
 

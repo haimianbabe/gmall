@@ -3,6 +3,7 @@ package com.wang.gmall.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wang.common.utils.PageUtils;
 import com.wang.gmall.product.entity.SkuSaleAttrValueEntity;
+import com.wang.gmall.product.entity.SpuInfoEntity;
 
 import java.util.List;
 import java.util.Map;
@@ -19,5 +20,6 @@ public interface SkuSaleAttrValueService extends IService<SkuSaleAttrValueEntity
     PageUtils queryPage(Map<String, Object> params);
 
     List<String> getSkuAttrs(Long skuId);
+
 }
 

@@ -1,14 +1,15 @@
 package com.wang.gmall.ware.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
+import com.wang.common.exception.BizCodeEnum;
+import com.wang.common.exception.NoStockException;
+import com.wang.gmall.ware.vo.HasStockVo;
+import com.wang.gmall.ware.vo.WareSkuLockVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.wang.gmall.ware.entity.WareSkuEntity;
 import com.wang.gmall.ware.service.WareSkuService;
@@ -29,6 +30,33 @@ import com.wang.common.utils.R;
 public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;
+
+    /**
+     * 为某个订单锁定库存锁定库存
+     * @param wareSkuLockVo
+     * @return
+     */
+    @PostMapping("/lock/order")
+    public R orderLockStock(@RequestBody WareSkuLockVo wareSkuLockVo) {
+        try {
+            Boolean stock = wareSkuService.orderLockStock(wareSkuLockVo);
+            return R.ok();
+        } catch (NoStockException e) {
+            return R.error(BizCodeEnum.NO_STOCK_EXCEPTION.getCode(), BizCodeEnum.NO_STOCK_EXCEPTION.getMsg());
+        }
+    }
+
+    /**
+     * 查询sku是否有库存
+     * @param skuIds
+     * @return
+     */
+    @PostMapping("/hosStock")
+    public R getSkuHasStock(@RequestBody List<Long> skuIds) {
+        List<HasStockVo> vos = wareSkuService.getSkuHasStock(skuIds);
+        // 疑问：为啥hashMap返回泛型没有用
+        return R.ok().setData(vos);
+    }
 
     /**
      * 列表

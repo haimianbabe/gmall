@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 import com.wang.common.vo.SkuInfoVO;
+import com.wang.gmall.product.entity.SpuInfoEntity;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,6 +32,15 @@ import com.wang.common.utils.R;
 public class SkuInfoController {
     @Autowired
     private SkuInfoService skuInfoService;
+
+    /**
+     * 根据skuid获取spuinfo
+     */
+    @RequestMapping("/getSpuInfo/{skuId}")
+    public R getSpuInfo(@PathVariable Long skuId){
+        SpuInfoEntity spuInfoEntity = skuInfoService.getSpuInfo(skuId);
+        return R.ok().put("spuinfo",spuInfoEntity);
+    }
 
     /**
      * 获取skuInfo
