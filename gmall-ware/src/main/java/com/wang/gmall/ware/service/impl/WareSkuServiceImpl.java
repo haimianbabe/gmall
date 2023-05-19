@@ -1,9 +1,13 @@
 package com.wang.gmall.ware.service.impl;
 
+import com.alibaba.fastjson.TypeReference;
+import com.wang.common.constant.OrderStatusEnum;
 import com.wang.common.constant.WareStatusEnum;
 import com.wang.common.exception.NoStockException;
+import com.wang.common.to.mq.OrderTo;
 import com.wang.common.to.mq.StockDetailTo;
 import com.wang.common.to.mq.StockLockedTo;
+import com.wang.common.utils.R;
 import com.wang.gmall.ware.entity.WareOrderTaskDetailEntity;
 import com.wang.gmall.ware.entity.WareOrderTaskEntity;
 import com.wang.gmall.ware.service.WareOrderTaskDetailService;
@@ -81,7 +85,6 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
             stock.setWareId(wareIds);
             return stock;
         }).collect(Collectors.toList());
-
         //锁定库存
         for (SkuWareHasStock hasStock : collect) {
             Boolean skuStocked = false;
@@ -136,6 +139,36 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
     @Override
     public List<HasStockVo> getSkuHasStock(List<Long> skuIds) {
         return null;
+    }
+
+    /**
+     * 解锁
+     * @param stockLockedTo
+     */
+    public void unlock(StockLockedTo stockLockedTo) {
+        StockDetailTo detailTo = stockLockedTo.getDetail();
+        WareOrderTaskDetailEntity detailEntity = wareOrderTaskDetailService.getById(detailTo.getId());
+        //1.如果工作单详情不为空，说明该库存锁定成功
+        if (detailEntity != null) {
+            WareOrderTaskEntity taskEntity = wareOrderTaskService.getById(stockLockedTo.getId());
+            //根据OrderSn找到订单详情
+            R r = orderFeignService.infoByOrderSn(taskEntity.getOrderSn());
+            if (r.get("code") .equals("0")) {
+                OrderTo order = r.getData("order", new TypeReference<OrderTo>() {
+                });
+                //没有这个订单||订单状态已经取消 解锁库存
+                if (order == null||order.getStatus()== OrderStatusEnum.CANCLED.getCode()) {
+                    //为保证幂等性，只有当工作单详情处于被锁定的情况下才进行解锁
+//                    if (detailEntity.getLockStatus()== WareTaskStatusEnum.Locked.getCode()){
+//                        unlockStock(detailTo.getSkuId(), detailTo.getSkuNum(), detailTo.getWareId(), detailEntity.getId());
+//                    }
+                }
+            }else {
+                throw new RuntimeException("远程调用订单服务失败");
+            }
+        }else {
+            //无需解锁
+        }
     }
 
 }
